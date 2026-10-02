@@ -4,6 +4,7 @@ import "./globals.css";
 import { auth } from "@/auth";
 import { SessionProvider } from "next-auth/react";
 import { ThemeProvider } from "@/components/ui/providers/theme-provider";
+import { Toaster } from "@/components/ui/toast";
 
 const poppins = Poppins({
   subsets:["latin"],
@@ -29,6 +30,7 @@ export default async function RootLayout({ children, }: Readonly<{
         enableSystem
         disableTransitionOnChange
         >
+          <Toaster />
       {children}
       </ThemeProvider>
       </body>
