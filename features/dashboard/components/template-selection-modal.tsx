@@ -33,7 +33,7 @@ type TemplateSelectionModalProps = {
   onClose: () => void;
   onSubmit: (data: {
     title: string;
-    template: "REACT" | "NEXTJS" | "EXPRESS" | "VUE" | "HONOR" | "ANGULAR";
+    template: "REACT" | "NEXTJS" | "EXPRESS" | "VUE" | "HONO" | "ANGULAR";
     description?: string;
   }) => void;
 };
@@ -176,13 +176,13 @@ const TemplateSelectionModal = ({
     if (selectedTemplate) {
       const templateMap: Record<
         string,
-        "REACT" | "NEXTJS" | "EXPRESS" | "VUE" | "HONOR" | "ANGULAR"
+        "REACT" | "NEXTJS" | "EXPRESS" | "VUE" | "HONO" | "ANGULAR"
       > = {
         react: "REACT",
         nextjs: "NEXTJS",
         express: "EXPRESS",
         vue: "VUE",
-        hono: "HONOR",
+        hono: "HONO",
         angular: "ANGULAR",
       };
 

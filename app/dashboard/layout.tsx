@@ -16,7 +16,7 @@ export default async function DashboardLayout({
         NEXTJS:"Lightbulb",
         EXPRESS:"Database",
         VUE:"Compass",
-        HONOR:"FlameIcon",
+        HONO:"FlameIcon",
         ANGULAR:"Terminal",
     }
 
@@ -31,7 +31,7 @@ export default async function DashboardLayout({
         <SidebarProvider>
             <div className="flex min-h-screen w-full overflow-x-hidden">
                 {/* TODO: DashboardSidebar implement */}
-                <DashboardSidebar initialPlaygroundData={[]}/>
+                <DashboardSidebar initialPlaygroundData={formattedPlaygroundData}/>
                 <main className="flex-1">{children}</main>
             </div>
         </SidebarProvider>

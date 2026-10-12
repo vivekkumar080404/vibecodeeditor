@@ -64,7 +64,14 @@ export async function GET(
 
     return Response.json({ success: true, templateJson: result }, { status: 200 });
   } catch (error) {
-    console.error("Error generating template JSON:", error);
-    return Response.json({ error: "Failed to generate template" }, { status: 500 });
-  }
+  console.error("Error generating template JSON:", error);
+
+  return Response.json(
+    {
+      error: "Failed to generate template",
+      details: error instanceof Error ? error.message : String(error),
+    },
+    { status: 500 }
+  );
+}
 }
